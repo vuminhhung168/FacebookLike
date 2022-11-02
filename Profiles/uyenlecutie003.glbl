@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>uyenlecutie003</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'uyenlecutie003@gmail.com'</initValue>
+      <name>FBusername</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'1_Abc_123'</initValue>
+      <name>FBpassword</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

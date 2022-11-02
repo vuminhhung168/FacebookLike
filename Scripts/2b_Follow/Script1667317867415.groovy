@@ -39,15 +39,15 @@ for (int i = 0; i < totalRows; i++) {
 }
 //DEFINITION: 
 //The URL of user you want to take action:
-String urlUser = 'https://www.facebook.com/lenguyenkhtn'
+String urlUser = 'https://www.facebook.com/tiendatruk'
 //Thuy: 'https://www.facebook.com/profile.php?id=100026190698253'
 
 //PREREQUISITE STEPS:
 WebUI.callTestCase(findTestCase('1_Open_browser_and_launch_Facebook'), [:], FailureHandling.STOP_ON_FAILURE)
 
 
-for (int i = 13; i < totalRows; i++) {
-    
+for (int i = 32; i < totalRows; i++) {
+	
 //Provide credential and click login:
 	//If user is locked, skip:
 	if ((i + 1) == 33) continue
@@ -83,6 +83,9 @@ for (int i = 13; i < totalRows; i++) {
 	if(isPresent == false) {
 		
 		WebUI.click(findTestObject('Facebook/Main_Page/div_contains(3dots)'))
+		
+		//To avoid FB lock account:
+		WebUI.delay(3)
 		
 		isPresent = WebUI.verifyElementPresent(findTestObject('Object Repository/Facebook/Main_Page/div_(role-button)_contains(Follow)'), 5, FailureHandling.OPTIONAL)
 		

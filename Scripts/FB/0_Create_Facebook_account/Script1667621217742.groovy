@@ -21,10 +21,10 @@ def fileTestData = 'Data Files/Data_Sheet2'
 
 int totalRows = findTestData(fileTestData).getRowNumbers()
 
-int columnIDUsername  = 2
-int columnIDPassword  = 3
-int columnIDFirstName = 4
-int columnIDLastName  = 5
+int columnIDUsername  = 3
+int columnIDPassword  = 4
+int columnIDFirstName = 5
+int columnIDLastName  = 6
 
 //DEFINITION: ARRAYS USED TO STORE DATA:
 def arrayUsername  = []
@@ -40,37 +40,37 @@ for (int i = 0; i < totalRows; i++) {
 	arrayLastName.add(findTestData(fileTestData).getValue(columnIDLastName,  i + 1))
 }
 
-for (int i = 7; i < 8; i++) {
+for (int i = 0; i < 1; i++) {
 	
-	WebUI.callTestCase(findTestCase('null'), [:], FailureHandling.STOP_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('FB/1_Launch_Facebook'), [:], FailureHandling.STOP_ON_FAILURE)
 	
-	WebUI.click(findTestObject('Object Repository/Facebook/Page_Login/button_Create_New_Account'))
+	WebUI.click(findTestObject('Facebook/Page_Login/button_Create_New_Account'))
 	
-	WebUI.setText(findTestObject('Object Repository/Facebook/Page_Login/Create_New_Account_Page/textbox_Last_Name'), arrayFirstName[i])
+	WebUI.setText(findTestObject('Facebook/Page_CreateAccount/textbox_Last_Name')       , arrayFirstName[i])
+	WebUI.setText(findTestObject('Facebook/Page_CreateAccount/textbox_First_Name')      , arrayLastName[i])
+	WebUI.setText(findTestObject('Facebook/Page_CreateAccount/textbox_Username')        , arrayUsername[i])
+	WebUI.setText(findTestObject('Facebook/Page_CreateAccount/textbox_Username_Confirm'), arrayUsername[i])
+	WebUI.setText(findTestObject('Facebook/Page_CreateAccount/textbox_Password')        , arrayPassword[i])
 	
-	WebUI.setText(findTestObject('Object Repository/Facebook/Page_Login/Create_New_Account_Page/textbox_First_Name'), arrayLastName[i])
+	WebUI.click(findTestObject('Facebook/Page_CreateAccount/option_Male'))
+	WebUI.selectOptionByValue(findTestObject('Facebook/Page_CreateAccount/select_Year'), '2001', false)
 	
-	WebUI.setText(findTestObject('Object Repository/Facebook/Page_Login/Create_New_Account_Page/textbox_Username'), arrayUsername[i])
+	WebUI.delay(2)
 	
-	WebUI.setText(findTestObject('Object Repository/Facebook/Page_Login/Create_New_Account_Page/textbox_Username_Confirm'), arrayUsername[i])
+	WebUI.click(findTestObject('Facebook/Page_CreateAccount/button_Sign_Up'))
+	WebUI.delay(2)
 	
-	WebUI.setText(findTestObject('Object Repository/Facebook/Page_Login/Create_New_Account_Page/textbox_Password'), arrayPassword[i])
+	WebUI.click(findTestObject('Facebook/Page_CreateAccount/span_Continue'))
+	WebUI.delay(2)
 	
-	WebUI.click(findTestObject('Object Repository/Facebook/Page_Login/Create_New_Account_Page/option_Male'))
+	//WebUI.waitForElementClickable(findTestObject('Facebook/Page_CreateAccount/checkbox_Not_A_Robot'), 300)
 	
-	WebUI.selectOptionByValue(findTestObject('Object Repository/Facebook/Page_Login/Create_New_Account_Page/select_Year'), '2001', false)
+	//WebUI.click(findTestObject('Facebook/Page_CreateAccount/checkbox_Not_A_Robot'))
 	
-	WebUI.delay(3)
 	
-	WebUI.click(findTestObject('Object Repository/Facebook/Page_Login/Create_New_Account_Page/button_Sign_Up'))
+	//WebUI.delay(20)
 	
-	WebUI.click(findTestObject('Object Repository/Facebook/Page_Login/Create_New_Account_Page/span_Continue'))
-	
-	WebUI.click(findTestObject('Object Repository/Facebook/Page_Login/Create_New_Account_Page/checkbox_Not_A_Robot'))
-	
-	WebUI.delay(20)
-	
-	WebUI.click(findTestObject('Object Repository/Facebook/Page_Login/Create_New_Account_Page/span_Continue'))
+	//WebUI.click(findTestObject('Object Repository/Facebook/Page_CreateAccount/span_Continue'))
 	
 	//WebUI.closeBrowser()
 	

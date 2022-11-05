@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>option_Male</name>
+   <name>checkbox_Not_A_Robot</name>
    <tag></tag>
-   <elementGuidId>f792c0b6-3403-4f14-b453-d2b6694a0998</elementGuidId>
+   <elementGuidId>a126e700-4b2a-425e-be03-e05abdfbac7d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;recaptcha-anchor&quot;]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@value=1]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

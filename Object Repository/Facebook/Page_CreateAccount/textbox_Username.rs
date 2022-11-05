@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Sign_Up</name>
+   <name>textbox_Username</name>
    <tag></tag>
-   <elementGuidId>b18321b9-af86-46c4-9bc8-bc99f87b3c61</elementGuidId>
+   <elementGuidId>f44c5f51-4c8d-4563-9a06-7933ddf0487f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//input[@name=&quot;reg_email__&quot;]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//button[@type=&quot;submit&quot;][text()=&quot;Sign Up&quot;]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.DOWN))
 
 WebUI.callTestCase(findTestCase('FB/action_Login'), [:], FailureHandling.STOP_ON_FAILURE)
 

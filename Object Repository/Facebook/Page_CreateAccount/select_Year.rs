@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_Continue</name>
+   <name>select_Year</name>
    <tag></tag>
-   <elementGuidId>01ca72d9-e684-41ed-a1c0-65283bb110be</elementGuidId>
+   <elementGuidId>58970957-4772-413c-acd6-9ea6a27c5f92</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;year&quot;]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//span[text()=&quot;Continue&quot;]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

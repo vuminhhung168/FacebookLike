@@ -6,12 +6,11 @@
    <elementGuidId>e2211279-7833-4615-90bb-3e0e39b2166e</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//input[@name=&quot;reg_email_confirmation__&quot;]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
